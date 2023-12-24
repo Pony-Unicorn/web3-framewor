@@ -36,8 +36,7 @@
     ]
   },
   "engines": {
-    "npm": "=10.2.5",
-    "node": "=20.10.0"
+    "node": "20.x"
   },
   "packageManager": "pnpm@8.12.1",
   "dependencies": {
