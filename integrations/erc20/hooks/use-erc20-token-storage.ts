@@ -7,10 +7,15 @@ const DEFAULT_VALUE: TokenType = undefined
 
 const STORAGE_KEY = "erc20-token"
 
-const getDefault = (storageKey: string) =>
-  typeof window !== "undefined"
-    ? (JSON.parse(localStorage.getItem(storageKey) || "") as Address)
-    : DEFAULT_VALUE
+const getDefault = (storageKey: string) => {
+  if (typeof window !== "undefined") {
+    return window?.localStorage.getItem(storageKey)
+      ? (JSON.parse(window?.localStorage?.getItem(storageKey) || "") as Address)
+      : DEFAULT_VALUE
+  } else {
+    return DEFAULT_VALUE
+  }
+}
 
 export interface IERC20TokenStorage {
   erc20Token: TokenType
