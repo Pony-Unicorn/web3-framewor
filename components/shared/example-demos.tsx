@@ -47,7 +47,7 @@ const demos = [
     description:
       "Start your next Web3 project in hexagon Mode with a deploy to Vercel in one click.",
     demo: (
-      <a href={DEPLOY_URL} rel="noreferrer" target={"_blank"}>
+      <a href={DEPLOY_URL} rel="noreferrer" target="_blank">
         <img
           alt="Deploy with Vercel"
           src="https://vercel.com/button"
