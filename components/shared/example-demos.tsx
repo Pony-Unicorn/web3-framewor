@@ -22,6 +22,17 @@ import {
 
 const demos = [
   {
+    title: "Example Components",
+    description: "example UI components.",
+    demo: (
+      <div className="min-w-[220px] text-center">
+        <Link href="/example/com" className={cn(buttonVariants())}>
+          View Example Page
+        </Link>
+      </div>
+    ),
+  },
+  {
     title: "Web3 Components for the power developer",
     description: "Pre-built Web3 components, powered by WAGMI",
     demo: (
