@@ -80,7 +80,7 @@ export function IntegrationOgImage(
             name: "SF Pro",
             data: await fetch(
               new URL(
-                "../../../assets/fonts/SF-Pro-Display-Medium.otf",
+                "../assets/fonts/SF-Pro-Display-Medium.otf",
                 import.meta.url
               )
             ).then((res) => res.arrayBuffer()),
