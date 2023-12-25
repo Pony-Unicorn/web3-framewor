@@ -24,11 +24,12 @@ export default function Page() {
         </Button>
 
         <Button
+          variant={"destructive"}
           onClick={() => {
             toast.error("My error toast")
           }}
         >
-          toast
+          toast error
         </Button>
       </PageSectionGrid>
     </div>
