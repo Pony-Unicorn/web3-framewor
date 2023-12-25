@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { hexagonIntegrations } from "@/data/hexagon-integrations"
 import { LuBook } from "react-icons/lu"
 
 import { cn } from "@/lib/utils"
@@ -24,6 +23,7 @@ import { Erc20SetTokenStorage } from "@/integrations/erc20/components/erc20-set-
 import { ERC20WriteMint } from "@/integrations/erc20/components/erc20-write-mint"
 import { ERC20WriteTransfer } from "@/integrations/erc20/components/erc20-write-transfer"
 import { useERC20TokenStorage } from "@/integrations/erc20/hooks/use-erc20-token-storage"
+import { hexagonIntegrations } from "@/integrations/hexagon-integrations"
 
 export default function Erc20Page() {
   const [token] = useERC20TokenStorage((state) => [state.erc20Token])

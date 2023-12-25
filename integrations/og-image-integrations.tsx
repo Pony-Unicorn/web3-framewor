@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og"
-import { hexagonIntegrations } from "@/data/hexagon-integrations"
 import { env } from "env.mjs"
+
+import { hexagonIntegrations } from "./hexagon-integrations"
 
 export const runtime = "edge"
 

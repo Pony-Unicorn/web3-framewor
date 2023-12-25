@@ -1,4 +1,4 @@
-import { IntegrationOgImage } from "@/components/ui/social/og-image-integrations"
+import { IntegrationOgImage } from "@/integrations/og-image-integrations"
 
 export const runtime = "edge"
 export const size = {
