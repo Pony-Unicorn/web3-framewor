@@ -1,5 +1,8 @@
 "use client"
 
+import { toast } from "sonner"
+
+import { Button } from "@/components/ui/button"
 import { PageHeader, PageHeaderHeading } from "@/components/layout/page-header"
 import { PageSectionGrid } from "@/components/layout/page-section"
 
@@ -9,7 +12,25 @@ export default function Page() {
       <PageHeader className="pb-8">
         <PageHeaderHeading>Components Demo</PageHeaderHeading>
       </PageHeader>
-      <PageSectionGrid></PageSectionGrid>
+      <PageSectionGrid>
+        <Button
+          onClick={() => {
+            toast("Your message failed to be sent.", {
+              className: "error",
+            })
+          }}
+        >
+          toast
+        </Button>
+
+        <Button
+          onClick={() => {
+            toast.error("My error toast")
+          }}
+        >
+          toast
+        </Button>
+      </PageSectionGrid>
     </div>
   )
 }
