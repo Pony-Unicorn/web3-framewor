@@ -69,7 +69,7 @@ export default function Erc20Page() {
                     </span>
                     <Link
                       className={cn(
-                        buttonVariants({ variant: "emerald", size: "sm" })
+                        buttonVariants({ variant: "outline", size: "sm" })
                       )}
                       href={`/example/erc20/1/0xed2F865e3427f0a9F9249912263a701eAe882EE4`}
                     >

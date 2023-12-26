@@ -42,5 +42,7 @@ pnpm build
 - [Radix](https://www.radix-ui.com/) – Primitives like modal, popover, etc. to build a stellar user experience
 - [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
 - [React Icons](https://react-icons.github.io/react-icons) – Beautifully simple, pixel-perfect icons
+- [shadcn-ui-theme-generator](https://gradient.page/tools/shadcn-ui-theme-generator) - theme generator
 
-The [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/shared/ui` folder.
+The [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder.
+

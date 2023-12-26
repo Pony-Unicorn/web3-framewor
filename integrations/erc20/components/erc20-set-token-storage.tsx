@@ -38,7 +38,7 @@ export function Erc20SetTokenStorage() {
             value={tokenAddress}
             onChange={(e) => setTokenAddress(e.target.value as Address)}
           />
-          <Button variant="emerald" disabled={!isValidAddress} type="submit">
+          <Button variant="outline" disabled={!isValidAddress} type="submit">
             {"Select Contract Address"}
           </Button>
         </form>
