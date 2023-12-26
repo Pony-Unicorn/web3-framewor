@@ -16,6 +16,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 import { PageHeader, PageHeaderHeading } from "@/components/layout/page-header"
 import { PageSectionGrid } from "@/components/layout/page-section"
 
@@ -50,6 +51,8 @@ export default function Page() {
             >
               toast error
             </Button>
+
+            <Input type="email" placeholder="Email" />
           </CardContent>
         </Card>
 
