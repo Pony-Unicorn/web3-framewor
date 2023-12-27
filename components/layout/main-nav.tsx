@@ -28,7 +28,7 @@ export function MainNav() {
           height={32}
           width={32}
         />
-        <span className="hidden bg-gradient-to-br from-black to-stone-500 bg-clip-text text-2xl font-bold text-transparent dark:from-stone-100 dark:to-yellow-200 sm:inline-block">
+        <span className="hidden bg-gradient-primary bg-clip-text text-2xl font-bold text-transparent sm:inline-block">
           {siteConfig.name}
         </span>
       </Link>

@@ -46,3 +46,17 @@ pnpm build
 
 The [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder.
 
+### Color
+
+- background 背景色
+- foreground 前景色
+- popover 弹出窗色
+- card 卡片色
+- border 边框色
+- input 输入框色
+- muted 柔和色
+- primary 重要色
+- secondary 次要色
+- accent 强调色
+- destructive 警告、破坏性的
+- ring

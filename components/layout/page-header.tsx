@@ -2,8 +2,8 @@
 
 import { motion, MotionProps } from "framer-motion"
 
-import { cn } from "@/lib/utils"
 import { fadeDownVariant, staggerContainer } from "@/config/design"
+import { cn } from "@/lib/utils"
 
 interface MotionHeaderProps extends MotionProps {
   className?: string
@@ -37,7 +37,7 @@ function PageHeaderHeading({
     <motion.h1
       variants={fadeDownVariant()}
       className={cn(
-        "bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center text-4xl font-bold leading-tight tracking-tight text-transparent drop-shadow-sm dark:from-stone-100 dark:to-yellow-200 md:text-8xl md:leading-[6rem] lg:leading-[1.1]",
+        "bg-gradient-primary bg-clip-text text-center text-4xl font-bold leading-tight tracking-tight text-transparent drop-shadow-sm md:text-8xl md:leading-[6rem] lg:leading-[1.1]",
         className
       )}
       {...props}
