@@ -10,6 +10,7 @@ import { ContractWriteButton } from "@/components/blockchain/contract-write-butt
 import { erc20MintableABI } from "../abis/erc20-mintable-abi"
 import { erc20MintableByteCode } from "../abis/erc20-mintable-bytecode"
 import { useERC20TokenStorage } from "../hooks/use-erc20-token-storage"
+import { Input } from "@/components/ui/input"
 
 export function DeployERC20Contract() {
   const [token, setToken] = useERC20TokenStorage((state) => [
@@ -63,9 +64,9 @@ export function DeployERC20Contract() {
       onSubmit={handleSubmit(onSubmit)}
     >
       <label>Name</label>
-      <input {...register("name")} className="input" />
+      <Input placeholder="myName" {...register("name")}/>
       <label>Symbol</label>
-      <input {...register("symbol")} className="input" />
+      <Input placeholder="mySymbol" {...register("symbol")}/>
       <ContractWriteButton
         isLoadingTx={isWaitingTransaction}
         isLoadingWrite={isSigning}
