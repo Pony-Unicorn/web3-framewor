@@ -8,8 +8,8 @@ import { Address, useAccount } from "wagmi"
 import { cn } from "@/lib/utils"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { IsWalletConnected } from "@/components/shared/is-wallet-connected"
-import { IsWalletDisconnected } from "@/components/shared/is-wallet-disconnected"
+import { IsWalletConnected } from "@/components/blockchain/is-wallet-connected"
+import { IsWalletDisconnected } from "@/components/blockchain/is-wallet-disconnected"
 
 import {
   useErc20BalanceOf,

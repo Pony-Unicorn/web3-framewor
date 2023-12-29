@@ -6,6 +6,8 @@ import { LuBook } from "react-icons/lu"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { IsWalletConnected } from "@/components/blockchain/is-wallet-connected"
+import { IsWalletDisconnected } from "@/components/blockchain/is-wallet-disconnected"
 import { WalletConnect } from "@/components/blockchain/wallet-connect"
 import {
   PageHeader,
@@ -14,8 +16,6 @@ import {
   PageHeaderHeading,
 } from "@/components/layout/page-header"
 import { PageSection } from "@/components/layout/page-section"
-import { IsWalletConnected } from "@/components/shared/is-wallet-connected"
-import { IsWalletDisconnected } from "@/components/shared/is-wallet-disconnected"
 import { LightDarkImage } from "@/components/shared/light-dark-image"
 import { ERC20Deploy } from "@/integrations/erc20/components/erc20-deploy"
 import { ERC20Read } from "@/integrations/erc20/components/erc20-read"
@@ -23,7 +23,6 @@ import { Erc20SetTokenStorage } from "@/integrations/erc20/components/erc20-set-
 import { ERC20WriteMint } from "@/integrations/erc20/components/erc20-write-mint"
 import { ERC20WriteTransfer } from "@/integrations/erc20/components/erc20-write-transfer"
 import { useERC20TokenStorage } from "@/integrations/erc20/hooks/use-erc20-token-storage"
-import { hexagonIntegrations } from "@/integrations/hexagon-integrations"
 
 export default function Erc20Page() {
   const [token] = useERC20TokenStorage((state) => [state.erc20Token])
@@ -32,8 +31,8 @@ export default function Erc20Page() {
     <div className="container relative mt-20">
       <PageHeader className="pb-8">
         <LightDarkImage
-          LightImage={hexagonIntegrations.erc20.imgDark}
-          DarkImage={hexagonIntegrations.erc20.imgLight}
+          LightImage="/integrations/erc20.png"
+          DarkImage="/integrations/erc20.png"
           alt="ERC20 Logo"
           width={100}
           height={100}
@@ -44,7 +43,7 @@ export default function Erc20Page() {
         </PageHeaderDescription>
         <PageHeaderCTA>
           <Link
-            href={hexagonIntegrations.erc20.url}
+            href="https://eips.ethereum.org/EIPS/eip-20"
             target="_blank"
             rel="noreferrer noopener"
             className={cn(buttonVariants({ variant: "outline" }))}

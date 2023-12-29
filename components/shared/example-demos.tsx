@@ -12,8 +12,8 @@ import { buttonVariants } from "@/components/ui/button"
 import { WalletAddress } from "@/components/blockchain/wallet-address"
 import { WalletConnect } from "@/components/blockchain/wallet-connect"
 import { PageSectionGrid } from "@/components/layout/page-section"
-import { IsWalletConnected } from "@/components/shared/is-wallet-connected"
-import { IsWalletDisconnected } from "@/components/shared/is-wallet-disconnected"
+import { IsWalletConnected } from "@/components/blockchain/is-wallet-connected"
+import { IsWalletDisconnected } from "@/components/blockchain/is-wallet-disconnected"
 import {
   ERC20Decimals,
   ERC20Name,

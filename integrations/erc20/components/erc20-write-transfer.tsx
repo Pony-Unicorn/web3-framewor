@@ -8,8 +8,8 @@ import { Separator } from "@/components/ui/separator"
 import { ContractWriteButton } from "@/components/blockchain/contract-write-button"
 import { TransactionStatus } from "@/components/blockchain/transaction-status"
 import { WalletConnect } from "@/components/blockchain/wallet-connect"
-import { IsWalletConnected } from "@/components/shared/is-wallet-connected"
-import { IsWalletDisconnected } from "@/components/shared/is-wallet-disconnected"
+import { IsWalletConnected } from "@/components/blockchain/is-wallet-connected"
+import { IsWalletDisconnected } from "@/components/blockchain/is-wallet-disconnected"
 
 import {
   useErc20Transfer,
