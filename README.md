@@ -6,6 +6,12 @@ nodeJs：使用 .nvmrc 文件进行管理，版本为 v20.10.0 , 建议使用 fn
 
 依赖包管理：必须使用 pnpm，版本为 8.x
 
+### Use
+
+```bash
+pnpm create next-app -e https://github.com/Pony-Unicorn/web3-framework
+```
+
 ```bash
 pnpm install
 ```
