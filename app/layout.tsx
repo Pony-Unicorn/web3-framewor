@@ -39,25 +39,23 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <body
-          className={cn(
-            "min-h-screen bg-background text-foreground font-sans antialiased",
-            fontSans.variable
-          )}
-        >
-          <RootProvider>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-            <NetworkStatus />
-          </RootProvider>
-          <Toaster />
-        </body>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen bg-background text-foreground font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <RootProvider>
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
+            <main className="flex-1 relative">{children}</main>
+            <Footer />
+          </div>
+          <NetworkStatus />
+        </RootProvider>
+        <Toaster />
+      </body>
+    </html>
   )
 }
