@@ -1,7 +1,7 @@
-import "@/styles/app.css"
 import "@/styles/globals.css"
 
 import { ReactNode } from "react"
+import { Metadata } from "next"
 import { env } from "@/env.mjs"
 
 import { siteConfig } from "@/config/site"
@@ -15,7 +15,7 @@ import RootProvider from "@/components/providers/root-provider"
 
 const url = env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 
-export const metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(url),
   title: `${siteConfig.name} - ${siteConfig.description}`,
   description: siteConfig.description,
