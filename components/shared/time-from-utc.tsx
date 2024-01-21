@@ -15,7 +15,7 @@ export const TimeFromUtc = ({
     if (date) {
       setTimestamp(dayjs(date).utc().local().format())
     }
-  }, [])
+  }, [date])
   return (
     <span className={className} {...props}>
       {timestamp}

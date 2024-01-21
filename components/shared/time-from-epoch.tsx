@@ -18,7 +18,7 @@ export const TimeFromEpoch = ({
     if (epoch) {
       setTimestamp(dayjs.unix(Number(epoch)).utc().local().format())
     }
-  }, [])
+  }, [epoch])
   return (
     <span className={className} {...props}>
       {timestamp}
