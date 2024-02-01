@@ -12,20 +12,22 @@ nodeJs：使用 .nvmrc 文件进行管理，版本为 v20.10.0 , 建议使用 fn
 pnpm create next-app -e https://github.com/Pony-Unicorn/web3-framework
 ```
 
-```bash
-pnpm install
-```
-
 #### Development
 
 ```bash
 pnpm dev
 ```
 
-#### Build
+### 错误处理
 
-```bash
-pnpm build
+- 推荐使用 `[err, res]` first error 形式进行错误处理，外部 throw 进行封装
+
+```
+const [err, res] = getUserInfo()
+if(err){
+  // error code
+}
+// right code
 ```
 
 ### Web3 Core
@@ -52,8 +54,7 @@ pnpm build
 - [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
 - [React Icons](https://react-icons.github.io/react-icons) – Beautifully simple, pixel-perfect icons
 - [shadcn-ui-theme-generator](https://gradient.page/tools/shadcn-ui-theme-generator) - theme generator
-
-The [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder.
+- The [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
 
 ### 目录结构
 
