@@ -1,5 +1,6 @@
 import { HTMLAttributes } from "react"
-import { useNetwork, type Address as AddressType } from "wagmi"
+import { Address as AddressType } from "viem"
+import { useAccount } from "wagmi"
 
 import { truncateEthAddress } from "@/lib/utils"
 
@@ -18,7 +19,7 @@ export const Address = ({
   isLink,
   ...props
 }: AddressProps) => {
-  const { chain } = useNetwork()
+  const { chain } = useAccount()
   const blockExplorerUrl = chain?.blockExplorers?.default.url
   const formattedAddress = truncate ? truncateEthAddress(address) : address
 

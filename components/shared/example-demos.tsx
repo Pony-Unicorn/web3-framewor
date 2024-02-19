@@ -14,11 +14,6 @@ import { WalletConnect } from "@/components/blockchain/wallet-connect"
 import { PageSectionGrid } from "@/components/layout/page-section"
 import { IsWalletConnected } from "@/components/blockchain/is-wallet-connected"
 import { IsWalletDisconnected } from "@/components/blockchain/is-wallet-disconnected"
-import {
-  ERC20Decimals,
-  ERC20Name,
-  ERC20Symbol,
-} from "@/integrations/erc20/components/erc20-read"
 
 const demos = [
   {
@@ -79,43 +74,6 @@ const demos = [
           src="/integrations/rainbowkit.svg"
           width={100}
         />
-      </div>
-    ),
-  },
-  {
-    title: "ERC20 WAGMI",
-    description:
-      "Read and Write to ERC20 smart contracts using minimal UI components.",
-    demo: (
-      <div className="min-w-[220px] text-center">
-        <h3 className="mt-4 text-2xl font-normal">
-          <ERC20Name
-            address={
-              "0xed2F865e3427f0a9F9249912263a701eAe882EE4" as "0x${string}"
-            }
-            chainId={1}
-          />
-          (
-          <ERC20Symbol
-            address={
-              "0xed2F865e3427f0a9F9249912263a701eAe882EE4" as "0x${string}"
-            }
-            chainId={1}
-          />
-          )
-        </h3>
-        <p>
-          Decimals
-          <ERC20Decimals
-            address={
-              "0xed2F865e3427f0a9F9249912263a701eAe882EE4" as "0x${string}"
-            }
-            chainId={1}
-          />
-        </p>
-        <Link href="/example/erc20" className={cn(buttonVariants())}>
-          View Token Page
-        </Link>
       </div>
     ),
   },

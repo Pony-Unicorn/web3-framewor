@@ -1,10 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { useBlockNumber, useNetwork } from "wagmi"
+import { useAccount, useBlockNumber } from "wagmi"
 
-import { cn } from "@/lib/utils"
-import { GetNetworkColor } from "@/lib/utils"
+import { cn, GetNetworkColor } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 
 const badgeVariants: Record<ReturnType<typeof GetNetworkColor>, string> = {
@@ -18,7 +17,7 @@ const badgeVariants: Record<ReturnType<typeof GetNetworkColor>, string> = {
 
 export function NetworkStatus() {
   const { data } = useBlockNumber()
-  const { chain } = useNetwork()
+  const { chain } = useAccount()
   const blockExplorerUrl = chain?.blockExplorers?.default.url
 
   if (!chain || !blockExplorerUrl) return null

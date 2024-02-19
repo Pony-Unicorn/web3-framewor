@@ -6,11 +6,7 @@ import { ThemeProvider } from "next-themes"
 import { useIsMounted } from "@/lib/hooks/use-is-mounted"
 import { RainbowKit } from "@/components/providers/rainbow-kit"
 
-interface RootProviderProps {
-  children: ReactNode
-}
-
-export default function RootProvider({ children }: RootProviderProps) {
+export default function RootProvider({ children }: { children: ReactNode }) {
   const isMounted = useIsMounted()
   return isMounted ? (
     <ThemeProvider

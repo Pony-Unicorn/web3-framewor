@@ -1,10 +1,11 @@
 import { HTMLAttributes } from "react"
-import { Address, useNetwork } from "wagmi"
+import { Address as AddressType } from "viem"
+import { useAccount } from "wagmi"
 
 import { cn } from "@/lib/utils"
 
 interface BlockExplorerLinkProps extends HTMLAttributes<HTMLSpanElement> {
-  address: Address | undefined
+  address: AddressType | undefined
   showExplorerName?: boolean
   type?: "address" | "tx"
 }
@@ -17,7 +18,7 @@ export const BlockExplorerLink = ({
   type = "address",
   ...props
 }: BlockExplorerLinkProps) => {
-  const { chain } = useNetwork()
+  const { chain } = useAccount()
   const blockExplorer = chain?.blockExplorers?.default
 
   if (!address) return null
