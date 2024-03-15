@@ -94,3 +94,7 @@ if(err){
 - [ ] 面板弹窗管理
 - [ ] RainbowKit 主题设定
 - [ ] 同步代码工具 npx code pull
+
+### 多语言注意事项
+
+- 配置多语言后，需要使用src/navigation 中的 Link, redirect, usePathname, useRouter

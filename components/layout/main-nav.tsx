@@ -1,8 +1,9 @@
 "use client"
 
 import React from "react"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
+// import Link from "next/link"
+import { Link } from "@/navigation"
 
 import { menu as menuConfig } from "@/config/menu"
 import { siteConfig } from "@/config/site"

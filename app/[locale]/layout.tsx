@@ -1,9 +1,10 @@
-import '@rainbow-me/rainbowkit/styles.css';
+import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/globals.css"
 
 import { ReactNode } from "react"
 import { Metadata } from "next"
 import { env } from "@/env.mjs"
+import { NextIntlClientProvider, useMessages } from "next-intl"
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -38,7 +39,15 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+  params: { locale },
+}: {
+  children: ReactNode
+  params: { locale: string }
+}) {
+  const messages = useMessages()
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -47,15 +56,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           fontSans.variable
         )}
       >
-        <RootProvider>
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            <main className="flex-1 relative">{children}</main>
-            <Footer />
-          </div>
-          <NetworkStatus />
-        </RootProvider>
-        <Toaster />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <RootProvider>
+            <div className="relative flex min-h-screen flex-col">
+              <SiteHeader />
+              <main className="flex-1 relative">{children}</main>
+              <Footer />
+            </div>
+            <NetworkStatus />
+          </RootProvider>
+          <Toaster />
+        </NextIntlClientProvider>
       </body>
     </html>
   )

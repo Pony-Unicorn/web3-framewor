@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
+import { Link } from "@/navigation"
+// import Link from "next/link"
 import { LuMenu } from "react-icons/lu"
 
 import { menu as menuConfig } from "@/config/menu"
