@@ -1,11 +1,10 @@
 import React from "react"
-import { useRouter } from "@/navigation"
+import { usePathname, useRouter } from "@/navigation"
 import { useLocale } from "next-intl"
 
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -22,9 +21,9 @@ const language = {
 export default function LanguageToggle() {
   const router = useRouter()
   const locale = useLocale()
-  const changeLanguage = (e: string) => {
-    router.replace(e, { scroll: true })
-  }
+  const pathname = usePathname()
+  const changeLanguage = (e: string) =>
+    router.replace(pathname, { locale: e, scroll: true })
 
   return (
     <Select onValueChange={changeLanguage}>
@@ -32,11 +31,11 @@ export default function LanguageToggle() {
         <SelectValue placeholder={language[locale]} />
       </SelectTrigger>
       <SelectContent>
-        <SelectItem value="en">English</SelectItem>
-        <SelectItem value="ja">Japanese</SelectItem>
-        <SelectItem value="ko">Korean</SelectItem>
-        <SelectItem value="zh-CN">中文简体</SelectItem>
-        <SelectItem value="zh-TW">中文繁体</SelectItem>
+        {Object.entries(language).map((v) => (
+          <SelectItem key={v[0]} value={v[0]}>
+            {v[1]}
+          </SelectItem>
+        ))}
       </SelectContent>
     </Select>
   )
