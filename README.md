@@ -51,10 +51,11 @@ if(err){
 
 - [TailwindCSS](https://tailwindcss.com) – Utility-first CSS framework for rapid UI development
 - [Radix](https://www.radix-ui.com/) – Primitives like modal, popover, etc. to build a stellar user experience
-- [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
-- [React Icons](https://react-icons.github.io/react-icons) – Beautifully simple, pixel-perfect icons
 - [shadcn-ui-theme-generator](https://gradient.page/tools/shadcn-ui-theme-generator) - theme generator
-- The [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
+- [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
+- [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
+- [React Icons](https://github.com/react-icons/react-icons) – Beautifully simple, pixel-perfect icons
+  - shadcn 安装组件后，手动将 lucide-react 替换成 React Icons 图标
 
 ### 目录结构
 
