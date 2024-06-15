@@ -2,9 +2,9 @@
 
 # Getting Started
 
-nodeJs：使用 .nvmrc 文件进行管理，版本为 v20.10.0 , 建议使用 fnm 作为版本管理
+nodeJs：使用 .nvmrc 文件进行管理，版本为 lts/iron , 建议使用 fnm 作为版本管理
 
-依赖包管理：必须使用 pnpm，版本为 8.x
+依赖包管理：必须使用 pnpm，版本为 9.1.4
 
 ### Use
 
@@ -25,27 +25,17 @@ pnpm dev
 ```
 const [err, res] = getUserInfo()
 if(err){
-  // error code
+  // Left code
 }
-// right code
+// Right code
 ```
 
-### Web3 Core
+### Core Dependencies
 
-- [WAGMI CLI](https://wagmi.sh/cli/getting-started) - Automatic React Hook Generation
-- [RainbowKit](https://www.rainbowkit.com/) - Wallet connection manager
-
-### Web2 Frameworks
-
+- [Wagmi](https://wagmi.sh/) - Wagmi Reactivity for Ethereum apps
+- [viem](https://viem.sh/) - Ethereum library
+- [web3modal](https://docs.walletconnect.com/appkit/next/core/installation/) - Wallet connection manager
 - [Vercel](https://vercel.com/) - App Infrastructure
-- [Prisma](https://www.prisma.io/) - Database ORM
-
-### Developer Experience
-
-- [TypeScript](https://www.typescriptlang.org/) – Static type checker for end-to-end typesafety
-- [Prettier](https://prettier.io/) – Opinionated code formatter for consistent code style
-- [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
-- [AssetPack](https://github.com/pixijs/assetpack/tree/main/) – AssetPack is a tool for optimising assets for the web. It can be used to transform, combine, compress assets. Any asset that you want to transform or optimise into something else can be done with AssetPack.
 
 ### User Interface
 
@@ -55,7 +45,13 @@ if(err){
 - [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
 - [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
 - [React Icons](https://github.com/react-icons/react-icons) – Beautifully simple, pixel-perfect icons
-  - shadcn 安装组件后，手动将 lucide-react 替换成 React Icons 图标
+
+### Developer Experience
+
+- [TypeScript](https://www.typescriptlang.org/) – Static type checker for end-to-end typesafety
+- [Prettier](https://prettier.io/) – Opinionated code formatter for consistent code style
+- [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
+- [AssetPack](https://github.com/pixijs/assetpack/tree/main/) – AssetPack is a tool for optimising assets for the web. It can be used to transform, combine, compress assets. Any asset that you want to transform or optimise into something else can be done with AssetPack.
 
 ### 目录结构
 
@@ -93,8 +89,6 @@ if(err){
 
 - [ ] 布局组件 flex、box、grid
 - [ ] 面板弹窗管理
-- [ ] RainbowKit 主题设定
-- [ ] 同步代码工具 npx code pull
 
 ### 多语言注意事项
 

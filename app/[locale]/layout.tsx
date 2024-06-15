@@ -1,21 +1,24 @@
-import "@rainbow-me/rainbowkit/styles.css"
 import "@/styles/globals.css"
 
 import { ReactNode } from "react"
 import { Metadata } from "next"
+import { headers } from "next/headers"
 import { env } from "@/env.mjs"
 import { NextIntlClientProvider, useMessages } from "next-intl"
+import { ThemeProvider } from "next-themes"
+import { cookieToInitialState } from "wagmi"
 
 import { siteConfig } from "@/config/site"
+import { config } from "@/config/web3Modal"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/sonner"
 import { NetworkStatus } from "@/components/blockchain/network-status"
 import { Footer } from "@/components/layout/footer"
 import { SiteHeader } from "@/components/layout/site-header"
-import RootProvider from "@/components/providers/root-provider"
+import Web3ModalProvider from "@/components/providers/web3Modal"
 
-const url = env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+const url = env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    url: url?.toString(),
+    url: url,
     siteName: siteConfig.name,
     type: "website",
   },
@@ -47,6 +50,7 @@ export default function RootLayout({
   params: { locale: string }
 }) {
   const messages = useMessages()
+  const initialState = cookieToInitialState(config, headers().get("cookie"))
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -57,14 +61,22 @@ export default function RootLayout({
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <RootProvider>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <main className="flex-1 relative">{children}</main>
-              <Footer />
-            </div>
-            <NetworkStatus />
-          </RootProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Web3ModalProvider initialState={initialState}>
+              <div className="relative flex min-h-screen flex-col">
+                <SiteHeader />
+                <main className="flex-1 relative">{children}</main>
+                <Footer />
+              </div>
+              <NetworkStatus />
+            </Web3ModalProvider>
+          </ThemeProvider>
+
           <Toaster />
         </NextIntlClientProvider>
       </body>

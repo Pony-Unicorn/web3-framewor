@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
   name: "Hexagon",
   title: "Hexagon - Web3 App Framework",
   emoji: "⬡",
-  description: "Web3 App framework built using Next.js, RainbowKit and more! ",
+  description: "Web3 App framework built using Next.js, web3modal and more! ",
   localeDefault: "en",
   links: {
     docs: "",

@@ -1,5 +1,4 @@
 import { HtmlHTMLAttributes } from "react"
-import { ConnectButton } from "@rainbow-me/rainbowkit"
 
 export const WalletConnect = ({
   className,
@@ -7,7 +6,7 @@ export const WalletConnect = ({
 }: HtmlHTMLAttributes<HTMLSpanElement>) => {
   return (
     <span className={className} {...props}>
-      <ConnectButton showBalance={false} />
+      <w3m-button />
     </span>
   )
 }

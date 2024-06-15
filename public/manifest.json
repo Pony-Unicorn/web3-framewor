@@ -6,7 +6,7 @@
   "start_url": "/",
   "name": "hexagon",
   "short_name": "hexagon",
-  "description": "Web3 App framework built using Next.js, RainbowKit and more! ",
+  "description": "Web3 App framework built using Next.js, web3modal and more! ",
   "icons": [
     {
       "src": "/icon-192x192.png",
