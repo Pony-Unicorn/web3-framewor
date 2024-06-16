@@ -1,7 +1,7 @@
 import {
   compressJpg,
   compressPng,
-  compressWebp,
+  // compressWebp,
 } from "@assetpack/plugin-compress"
 
 export default {

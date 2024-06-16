@@ -1,7 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
+// import Link from "next/link"
+import { Link } from "@/navigation"
 import { motion, MotionProps } from "framer-motion"
 import Balancer from "react-wrap-balancer"
 
@@ -9,11 +10,11 @@ import { fadeUpVariant } from "@/config/design"
 import { DEPLOY_URL } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { IsWalletConnected } from "@/components/blockchain/is-wallet-connected"
+import { IsWalletDisconnected } from "@/components/blockchain/is-wallet-disconnected"
 import { WalletAddress } from "@/components/blockchain/wallet-address"
 import { WalletConnect } from "@/components/blockchain/wallet-connect"
 import { PageSectionGrid } from "@/components/layout/page-section"
-import { IsWalletConnected } from "@/components/blockchain/is-wallet-connected"
-import { IsWalletDisconnected } from "@/components/blockchain/is-wallet-disconnected"
 
 const demos = [
   {
@@ -60,21 +61,6 @@ const demos = [
           width={120}
         />
       </a>
-    ),
-  },
-  {
-    title: "Rainbowkit",
-    description:
-      "The best way to connect a wallet. Designed for everyone. Built for developers.",
-    demo: (
-      <div className="flex items-center justify-center space-x-20">
-        <Image
-          alt="Rainbow logo"
-          height={100}
-          src="/integrations/rainbowkit.svg"
-          width={100}
-        />
-      </div>
     ),
   },
 ]
