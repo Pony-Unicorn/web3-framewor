@@ -89,6 +89,14 @@ if(err){
 
 - [ ] 布局组件 flex、box、grid
 - [ ] 面板弹窗管理
+- [ ] 框架优化
+  - [ ] 项目以后自己安装 ui shadcn
+  - [ ] 替换 `react-icons/fa` 图标库
+  - [ ] 调试控制台报错，启动时谷歌字体问题
+  - [ ] 项目配置使用配置文件生成，只配置一遍？
+  - [ ] 合约调用返回错误，框架中没有友好的提示
+  - [ ] viem 的错误处理
+    - console.log("error message >>>", error?.message.split("\n")[2])
 
 ### 多语言注意事项
 
