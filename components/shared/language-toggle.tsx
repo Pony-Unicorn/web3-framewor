@@ -23,7 +23,7 @@ export default function LanguageToggle() {
   const locale = useLocale()
   const pathname = usePathname()
   const changeLanguage = (e: string) =>
-    router.replace(pathname, { locale: e, scroll: true })
+    router.replace(pathname, { locale: e as any, scroll: true })
 
   return (
     <Select onValueChange={changeLanguage}>
