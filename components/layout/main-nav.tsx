@@ -20,12 +20,12 @@ import { LightDarkImage } from "@/components/shared/light-dark-image"
 export function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
-      <Link href="/" className="mr-6 flex items-center space-x-2">
+      <Link href="/" className="flex items-center">
         <LightDarkImage
           LightImage="/logo-dark.png"
           DarkImage="/logo-light.png"
           alt="Hexagon Logo"
-          className="rounded-full"
+          className="rounded-full mx-2"
           height={32}
           width={32}
         />

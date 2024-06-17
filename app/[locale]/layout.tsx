@@ -10,10 +10,11 @@ import { cookieToInitialState } from "wagmi"
 
 import { siteConfig } from "@/config/site"
 import { config } from "@/config/web3Modal"
-import { fontPlaywrite, fontSans } from "@/lib/fonts"
+import { fontPlaywrite } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/sonner"
 import { NetworkStatus } from "@/components/blockchain/network-status"
+import { TailwindIndicator } from "@/components/debug/tailwind-indicator"
 import { Footer } from "@/components/layout/footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import Web3ModalProvider from "@/components/providers/web3Modal"
@@ -61,12 +62,7 @@ export default function RootLayout({
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Web3ModalProvider initialState={initialState}>
               <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
@@ -75,6 +71,7 @@ export default function RootLayout({
               </div>
               <NetworkStatus />
             </Web3ModalProvider>
+            <TailwindIndicator />
           </ThemeProvider>
 
           <Toaster />

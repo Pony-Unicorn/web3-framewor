@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
 
@@ -13,6 +12,7 @@ interface LightDarkImageProps {
   width: number
   className?: string
 }
+
 const LightDarkImage = ({
   LightImage,
   DarkImage,
@@ -21,16 +21,23 @@ const LightDarkImage = ({
   width,
   className,
 }: LightDarkImageProps) => {
-  const { resolvedTheme } = useTheme()
-
   return (
-    <Image
-      src={resolvedTheme === "dark" ? DarkImage : LightImage}
-      alt={alt}
-      height={height}
-      width={width}
-      className={cn("object-contain", className)}
-    />
+    <>
+      <Image
+        src={DarkImage}
+        alt={alt}
+        width={width}
+        height={height}
+        className={cn("hidden dark:block object-contain", className)}
+      />
+      <Image
+        src={LightImage}
+        alt={alt}
+        width={width}
+        height={height}
+        className={cn("dark:hidden object-contain", className)}
+      />
+    </>
   )
 }
 

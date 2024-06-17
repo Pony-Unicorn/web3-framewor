@@ -11,7 +11,7 @@ import { Separator } from "@/components/ui/separator"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 import { WalletConnect } from "../blockchain/wallet-connect"
-import { ModeToggle } from "../shared/mode-toggle"
+import { ThemeToggle } from "../shared/theme-toggle"
 
 export function MobileNav() {
   const [open, setOpen] = useState(false)
@@ -32,7 +32,7 @@ export function MobileNav() {
       </div>
       <SheetContent side="left" className="pr-0">
         <div className="flex items-center gap-x-4">
-          <ModeToggle />
+          <ThemeToggle />
         </div>
         <ul className="mt-6 flex flex-col gap-y-6">
           {menuConfig.map(({ title, href }) => (
