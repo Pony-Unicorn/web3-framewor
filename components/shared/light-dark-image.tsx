@@ -23,14 +23,9 @@ const LightDarkImage = ({
 }: LightDarkImageProps) => {
   const { resolvedTheme } = useTheme()
 
-  let imageUrl = LightImage
-  if (resolvedTheme === "dark") {
-    imageUrl = DarkImage
-  }
-
   return (
     <Image
-      src={imageUrl}
+      src={resolvedTheme === "dark" ? DarkImage : LightImage}
       alt={alt}
       height={height}
       width={width}
