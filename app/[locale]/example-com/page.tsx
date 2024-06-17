@@ -24,7 +24,7 @@ export default function Page() {
   return (
     <div className="container relative mt-20 px-0">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Components Demo</PageHeaderHeading>
+        <PageHeaderHeading>Example Components</PageHeaderHeading>
       </PageHeader>
       <PageSectionGrid>
         <Card>

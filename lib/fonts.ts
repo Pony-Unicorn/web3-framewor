@@ -1,11 +1,18 @@
-import { Roboto_Mono as FontMono, Inter as FontSans } from "next/font/google"
+import localFont from "next/font/local"
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+// Font files are in the 'public/fonts/' directory
+// shortcut ../public/fonts/
+
+// google Inter font
+export const fontSans = localFont({
+  src: "../public/fonts/Inter-SemiBold.woff2",
+  display: "swap",
+  variable: "--font-inter",
 })
 
-export const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+// google PlaywriteIS font
+export const fontPlaywrite = localFont({
+  src: "../public/fonts/PlaywriteIS-Thin.woff2",
+  display: "swap",
+  variable: "--font-playwrite",
 })

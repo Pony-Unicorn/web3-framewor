@@ -22,7 +22,10 @@ const demos = [
     description: "example UI components.",
     demo: (
       <div className="min-w-[220px] text-center">
-        <Link href="/example/com" className={cn(buttonVariants())}>
+        <Link
+          href="/example-com"
+          className={cn(buttonVariants(), "font-playwrite")}
+        >
           View Example Page
         </Link>
       </div>

@@ -10,7 +10,7 @@ import { cookieToInitialState } from "wagmi"
 
 import { siteConfig } from "@/config/site"
 import { config } from "@/config/web3Modal"
-import { fontSans } from "@/lib/fonts"
+import { fontPlaywrite, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/sonner"
 import { NetworkStatus } from "@/components/blockchain/network-status"
@@ -57,7 +57,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background text-foreground font-sans antialiased",
-          fontSans.variable
+          fontPlaywrite.variable
         )}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
