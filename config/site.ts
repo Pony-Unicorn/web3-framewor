@@ -1,12 +1,14 @@
+import { description, name } from "@/public/manifest.json"
+
+// PackageJson
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Site
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Hexagon",
-  title: "Hexagon - Web3 App Framework",
-  description: "Web3 App framework built using Next.js, web3modal and more! ",
+  name,
+  description,
   localeDefault: "en",
   links: {
     docs: "",

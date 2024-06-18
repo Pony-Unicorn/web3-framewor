@@ -1,5 +1,6 @@
 import { HTMLAttributes } from "react"
 import Link from "next/link"
+import { version } from "@/package.json"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 
 import { siteConfig } from "@/config/site"
@@ -16,14 +17,13 @@ export function Footer({ className, ...props }: HTMLAttributes<HTMLElement>) {
 
   return (
     <footer className={classes} {...props}>
-      <h3>{siteConfig.title}</h3>
       <Link
         href="https://testbug.cc/"
         target="_blank"
         rel="noreferrer noopenner"
         className={cn(buttonVariants({ variant: "link", size: "sm" }))}
       >
-        Built by test bug
+        Built by Pony Unicorn, version: {version}
       </Link>
       <div className="mt-2 flex items-center space-x-2">
         <LinkComponent href={`${siteConfig.links.github}`}>

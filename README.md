@@ -90,7 +90,6 @@ if(err){
 - [ ] 布局组件 flex、box、grid
 - [ ] 面板弹窗管理
 - [ ] 框架优化
-  - [ ] 项目配置使用配置文件生成，只配置一遍？，最好配置文件，然后脚本生成一下
   - [ ] 合约调用返回错误，框架中没有友好的提示 viem 的错误处理
     - console.log("error message >>>", error?.message.split("\n")[2])
 

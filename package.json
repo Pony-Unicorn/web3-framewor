@@ -1,10 +1,10 @@
 {
   "author": "Pony Unicorn",
   "name": "web3-framework",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "license": "MIT",
-  "description": "Web3 App framework built using Next.js, web3modal and more! ",
+  "description": "dApp framework built using Next.js, web3modal and more! ",
   "keywords": [
     "Web3",
     "Dapp",
@@ -59,6 +59,7 @@
     "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dayjs": "^1.11.11",
     "framer-motion": "^11.2.10",
     "next": "14.2.4",
     "next-intl": "^3.15.0",
