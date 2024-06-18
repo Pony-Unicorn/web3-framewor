@@ -70,8 +70,8 @@ export default function RootLayout({
                 <Footer />
               </div>
               <NetworkStatus />
+              <Toaster />
             </Web3ModalProvider>
-            <Toaster />
             <TailwindIndicator />
           </ThemeProvider>
         </NextIntlClientProvider>
