@@ -71,10 +71,9 @@ export default function RootLayout({
               </div>
               <NetworkStatus />
             </Web3ModalProvider>
+            <Toaster />
             <TailwindIndicator />
           </ThemeProvider>
-
-          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>
