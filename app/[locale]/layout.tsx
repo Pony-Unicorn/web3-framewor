@@ -66,11 +66,10 @@ export default function RootLayout({
             <Web3ModalProvider initialState={initialState}>
               <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
-                {/* <main className="flex-1 relative">{children}</main> */}
-                <p>this赛积分</p>
+                <main className="flex-1 relative">{children}</main>
                 <Footer />
               </div>
-              <NetworkStatus />
+              {/* <NetworkStatus /> */}
               <Toaster />
             </Web3ModalProvider>
             <TailwindIndicator />
