@@ -16,11 +16,13 @@ const badgeVariants: Record<ReturnType<typeof GetNetworkColor>, string> = {
 }
 
 export function NetworkStatus() {
+  const { chain, isConnected } = useAccount()
+
   const { data } = useBlockNumber()
-  const { chain } = useAccount()
+
   const blockExplorerUrl = chain?.blockExplorers?.default.url
 
-  if (!chain || !blockExplorerUrl) return null
+  if (!chain || !blockExplorerUrl || !isConnected) return null
 
   return (
     <Link
