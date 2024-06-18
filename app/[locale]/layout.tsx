@@ -64,14 +64,13 @@ export default function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Web3ModalProvider initialState={initialState}>
-              {/* <div className="relative flex min-h-screen flex-col">
+              <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
                 <main className="flex-1 relative">{children}</main>
                 <Footer />
               </div>
               <NetworkStatus />
-              <Toaster /> */}
-              <p>this is page</p>
+              <Toaster />
             </Web3ModalProvider>
             <TailwindIndicator />
           </ThemeProvider>
