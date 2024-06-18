@@ -1,14 +1,13 @@
-import { description, name } from "@/public/manifest.json"
+import manifestJson from "@/public/manifest.json"
 
-// PackageJson
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // Site
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name,
-  description,
+  name: manifestJson.name,
+  description: manifestJson.description,
   localeDefault: "en",
   links: {
     docs: "",

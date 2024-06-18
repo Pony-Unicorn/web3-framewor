@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react"
 import Link from "next/link"
-import { version } from "@/package.json"
+import packageJson from "@/package.json"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 
 import { siteConfig } from "@/config/site"
@@ -23,7 +23,7 @@ export function Footer({ className, ...props }: HTMLAttributes<HTMLElement>) {
         rel="noreferrer noopenner"
         className={cn(buttonVariants({ variant: "link", size: "sm" }))}
       >
-        Built by Pony Unicorn, version: {version}
+        Built by Pony Unicorn, version: {packageJson.version}
       </Link>
       <div className="mt-2 flex items-center space-x-2">
         <LinkComponent href={`${siteConfig.links.github}`}>
