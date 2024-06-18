@@ -4,11 +4,11 @@ import localFont from "next/font/local"
 // shortcut ../public/fonts/
 
 // google Inter font
-export const fontSans = localFont({
-  src: "../public/fonts/Inter-SemiBold.woff2",
-  display: "swap",
-  variable: "--font-inter",
-})
+// export const fontSans = localFont({
+//   src: "../public/fonts/Inter-SemiBold.woff2",
+//   display: "swap",
+//   variable: "--font-inter",
+// })
 
 // google PlaywriteIS font
 export const fontPlaywrite = localFont({
