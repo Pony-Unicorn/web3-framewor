@@ -1,13 +1,13 @@
 "use client"
 
 import React from "react"
-import { usePathname } from "next/navigation"
+// import { usePathname } from "next/navigation"
 // import Link from "next/link"
-import { Link } from "@/navigation"
+import { Link, usePathname } from "@/navigation"
+import { FaExternalLinkAlt } from "react-icons/fa"
 
 import { menu as menuConfig } from "@/config/menu"
 import { siteConfig } from "@/config/site"
-import { isUrl } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -34,6 +34,30 @@ export function MainNav() {
         </span>
       </Link>
       <MainNavMenu />
+      <div className="flex flex-1 items-center justify-end space-x-4">
+        <nav className="flex items-center space-x-4">
+          <Link
+            className="flex items-center gap-2"
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+            <FaExternalLinkAlt />
+            <span className="sr-only">GitHub</span>
+          </Link>
+          <Link
+            className="flex items-center gap-2"
+            href={siteConfig.links.twitter}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Twitter
+            <FaExternalLinkAlt />
+            <span className="sr-only">Twitter</span>
+          </Link>
+        </nav>
+      </div>
     </div>
   )
 }
@@ -51,25 +75,7 @@ function MainNavMenu() {
               active={pathname === href}
               className={navigationMenuTriggerStyle()}
             >
-              <Link href={href} target={isUrl(href) ? "_blank" : "_self"}>
-                {title}
-                {isUrl(href) && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-5 h-5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                    />
-                  </svg>
-                )}
-              </Link>
+              <Link href={href}>{title}</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         ))}
