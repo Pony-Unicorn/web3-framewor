@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 // import Link from "next/link"
 import { Link } from "@/navigation"
 import { motion, MotionProps } from "framer-motion"
@@ -58,7 +57,8 @@ const demos = [
       "Start your next Web3 project in hexagon Mode with a deploy to Vercel in one click.",
     demo: (
       <a href={DEPLOY_URL} rel="noreferrer" target="_blank">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           alt="Deploy with Vercel"
           src="https://vercel.com/button"
           width={120}

@@ -68,8 +68,8 @@ export default function RootLayout({
                 <SiteHeader />
                 <main className="flex-1 relative">{children}</main>
                 <Footer />
+                <NetworkStatus />
               </div>
-              {/* <NetworkStatus /> */}
               <Toaster />
             </Web3ModalProvider>
             <TailwindIndicator />
