@@ -93,6 +93,10 @@ if(err){
   - [ ] 合约调用返回错误，框架中没有友好的提示 viem 的错误处理
     - console.log("error message >>>", error?.message.split("\n")[2])
 
+### bug
+
+- 运行时控制台 Unable to find `next-intl` locale because the middleware didn't run on this request. See https://next-intl-docs.vercel.app/docs/routing/middleware#unable-to-find-locale. The `notFound()` function will be called as a result. 错误处理
+
 ### 多语言注意事项
 
 - 配置多语言后，需要使用src/navigation 中的 Link, redirect, usePathname, useRouter
