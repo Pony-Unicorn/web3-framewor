@@ -7,7 +7,7 @@ import { siteConfig } from "./site"
 
 export const config = defaultWagmiConfig({
   projectId: env.NEXT_PUBLIC_PROJECT_ID,
-  chains: env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : [mainnet],
+  chains: env.NEXT_PUBLIC_ENABLE_TESTNETS ? [sepolia] : [mainnet],
   metadata: {
     name: siteConfig.name,
     description: siteConfig.description,

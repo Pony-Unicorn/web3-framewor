@@ -7,7 +7,10 @@ export const env = createEnv({
     // NEXTAUTH_SECRET: z.string().min(32),
   },
   client: {
-    NEXT_PUBLIC_ENABLE_TESTNETS: z.enum(["true", "false"]).default("false"),
+    NEXT_PUBLIC_ENABLE_TESTNETS: z
+      .enum(["true", "false"])
+      .default("false")
+      .transform((val) => val === "true"),
     NEXT_PUBLIC_ALCHEMY_API_KEY: z.string().min(1).optional(),
     NEXT_PUBLIC_SITE_URL: z.string().url().default("http://localhost:3000/"),
     NEXT_PUBLIC_PROJECT_ID: z.string().length(32).readonly(),
