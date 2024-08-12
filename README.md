@@ -9,7 +9,11 @@ nodeJs：使用 .nvmrc 文件进行管理，版本为 lts/iron , 建议使用 fn
 ### Use
 
 ```bash
-pnpm create next-app -e https://github.com/Pony-Unicorn/web3-framework
+npx degit Pony-Unicorn/web3-framework my-project
+
+cd my-project
+
+pnpm install
 ```
 
 #### Development
