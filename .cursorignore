@@ -1,0 +1,15 @@
+#Ignore configuration file
+.vscode/
+.eslintrc
+.eslintignore
+.eslintrc.json
+.prettierrc
+prettier.config.js
+.prettierignore
+.assetpack.mjs
+
+#Ignore documents and licenses
+LICENSE
+README.md
+
+/raw-assets

@@ -57,6 +57,10 @@ if(err){
 - [ESLint](https://eslint.org/) – Pluggable linter for Next.js and TypeScript
 - [AssetPack](https://github.com/pixijs/assetpack/tree/main/) – AssetPack is a tool for optimising assets for the web. It can be used to transform, combine, compress assets. Any asset that you want to transform or optimise into something else can be done with AssetPack.
 
+### AI Editor cursor rules
+- [参考 1](https://gist.github.com/Shpigford/b3c2abe5e631f3edc4eac919ed31eaeb)
+- [参考 2](https://github.com/PatrickJS/awesome-cursorrules)
+
 ### 目录结构
 
 ### 命名：
