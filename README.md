@@ -49,6 +49,7 @@ if(err){
 - [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
 - [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
 - [React Icons](https://github.com/react-icons/react-icons) – Beautifully simple, pixel-perfect icons
+- [lucide](https://lucide.dev/) – Beautiful & consistent icons Made by the community.
 
 ### Developer Experience
 
