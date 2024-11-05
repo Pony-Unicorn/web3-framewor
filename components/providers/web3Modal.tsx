@@ -14,6 +14,9 @@ createWeb3Modal({
   wagmiConfig: config,
   projectId: env.NEXT_PUBLIC_PROJECT_ID,
   enableOnramp: false, // default to true, Remove buy
+  featuredWalletIds: [
+    "971e689d0a5be527bac79629b4ee9b925e82208e5168b733496a09c0faed0709",
+  ],
 })
 
 function Web3ModalProvider({
