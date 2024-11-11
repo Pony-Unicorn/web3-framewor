@@ -6,10 +6,10 @@ import { headers } from "next/headers"
 import { env } from "@/env.mjs"
 import { NextIntlClientProvider, useMessages } from "next-intl"
 import { ThemeProvider } from "next-themes"
-import { cookieToInitialState } from "wagmi"
+import { Config, cookieToInitialState } from "wagmi"
 
+import { wagmiAdapter } from "@/config/appkit"
 import { siteConfig } from "@/config/site"
-import { config } from "@/config/web3Modal"
 import { fontPlaywrite } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/sonner"
@@ -17,7 +17,7 @@ import { NetworkStatus } from "@/components/blockchain/network-status"
 import { TailwindIndicator } from "@/components/debug/tailwind-indicator"
 import { Footer } from "@/components/layout/footer"
 import { SiteHeader } from "@/components/layout/site-header"
-import Web3ModalProvider from "@/components/providers/web3Modal"
+import AppKitProvider from "@/components/providers/AppKitProvider"
 
 const url = env.NEXT_PUBLIC_SITE_URL
 
@@ -51,7 +51,10 @@ export default function RootLayout({
   params: { locale: string }
 }) {
   const messages = useMessages()
-  const initialState = cookieToInitialState(config, headers().get("cookie"))
+  const initialState = cookieToInitialState(
+    wagmiAdapter.wagmiConfig as Config,
+    headers().get("cookie")
+  )
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -63,7 +66,7 @@ export default function RootLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Web3ModalProvider initialState={initialState}>
+            <AppKitProvider initialState={initialState}>
               <div className="relative flex min-h-screen flex-col">
                 <SiteHeader />
                 <main className="flex-1 relative">{children}</main>
@@ -71,7 +74,7 @@ export default function RootLayout({
               </div>
               <NetworkStatus />
               <Toaster />
-            </Web3ModalProvider>
+            </AppKitProvider>
             <TailwindIndicator />
           </ThemeProvider>
         </NextIntlClientProvider>

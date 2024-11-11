@@ -38,7 +38,7 @@ if(err){
 
 - [Wagmi](https://wagmi.sh/) - Wagmi Reactivity for Ethereum apps
 - [viem](https://viem.sh/) - Ethereum library
-- [web3modal](https://docs.walletconnect.com/appkit/next/core/installation/) - Wallet connection manager
+- [@reown/appkit](https://docs.reown.com/appkit/next/core/installation) - Wallet connection manager
 - [Vercel](https://vercel.com/) - App Infrastructure
 
 ### User Interface

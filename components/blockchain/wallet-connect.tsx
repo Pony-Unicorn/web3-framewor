@@ -6,7 +6,7 @@ export const WalletConnect = ({
 }: HtmlHTMLAttributes<HTMLSpanElement>) => {
   return (
     <span className={className} {...props}>
-      <w3m-button />
+      <appkit-button />
     </span>
   )
 }

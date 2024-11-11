@@ -6,7 +6,7 @@
   "start_url": "/",
   "name": "Hexagon",
   "short_name": "Hexagon",
-  "description": "dApp framework built using Next.js, web3modal and more! ",
+  "description": "dApp framework built using Next.js, @reown/appkit and more! ",
   "icons": [
     {
       "src": "/icon-192x192.png",
