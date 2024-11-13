@@ -1,6 +1,9 @@
 "use client"
 
+import { useEffect } from "react"
+import { SiweMessage } from "siwe"
 import { toast } from "sonner"
+import { useAccount, useSignMessage } from "wagmi"
 
 import {
   Accordion,
@@ -21,6 +24,15 @@ import { PageHeader, PageHeaderHeading } from "@/components/layout/page-header"
 import { PageSectionGrid } from "@/components/layout/page-section"
 
 export default function Page() {
+  const account = useAccount()
+  const { signMessage, data } = useSignMessage()
+
+  useEffect(() => {
+    if (data) {
+      console.log("signMessage>>>", data)
+    }
+  }, [data])
+
   return (
     <div className="container relative mt-20 px-0">
       <PageHeader className="pb-8">
@@ -78,7 +90,49 @@ export default function Page() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Siwe sign</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col space-y-3">
+            <Button
+              onClick={async () => {
+                const message = new SiweMessage({
+                  domain: document.location.host,
+                  address: account.address,
+                  chainId: account.chainId,
+                  uri: document.location.origin,
+                  version: "1",
+                  statement: "Please sign with your account",
+                  nonce: await getNonce(),
+                })
+
+                signMessage({ message: message.prepareMessage() })
+              }}
+            >
+              Siwe Sign
+            </Button>
+          </CardContent>
+        </Card>
       </PageSectionGrid>
     </div>
   )
+}
+
+const getNonce = async (): Promise<string> => {
+  const res = await fetch(
+    "https://sepolia-wallet.nanon.network/thirdparty/siwe/nonce",
+    {
+      method: "GET",
+    }
+  )
+  if (!res.ok) {
+    throw new Error("Network response was not ok")
+  }
+
+  const resData = await res.json()
+  const nonce = resData.data.nonce
+  console.log("Nonce:", nonce)
+  return nonce
 }
