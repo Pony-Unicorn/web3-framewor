@@ -39,7 +39,6 @@ if(err){
 - [Wagmi](https://wagmi.sh/) - Wagmi Reactivity for Ethereum apps
 - [viem](https://viem.sh/) - Ethereum library
 - [@reown/appkit](https://docs.reown.com/appkit/next/core/installation) - Wallet connection manager
-- [Vercel](https://vercel.com/) - App Infrastructure
 - zustand 其实也许在 nextjs 中你真的不需要状态管理
 
 ### User Interface
@@ -49,6 +48,7 @@ if(err){
 - [shadcn-ui-theme-generator](https://gradient.page/tools/shadcn-ui-theme-generator) - theme generator
 - [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
 - [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
+- [字体动画参考](https://variantvault.chrisabdo.dev/text-variants)
 - [React Icons](https://github.com/react-icons/react-icons) – Beautifully simple, pixel-perfect icons
 - [lucide](https://lucide.dev/) – Beautiful & consistent icons Made by the community.
 
