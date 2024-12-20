@@ -1,7 +1,7 @@
 "use client"
 
 import React, { type ReactNode } from "react"
-import { env } from "@/env.mjs"
+import { env } from "@/env"
 import { createAppKit } from "@reown/appkit/react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Config, WagmiProvider, type State } from "wagmi"

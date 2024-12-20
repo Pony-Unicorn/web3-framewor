@@ -22,17 +22,9 @@ pnpm install
 pnpm dev
 ```
 
-### 错误处理
+### 编码规范
 
-- 推荐使用 `[err, res]` first error 形式进行错误处理，外部 throw 进行封装
-
-```
-const [err, res] = getUserInfo()
-if(err){
-  // Left code
-}
-// Right code
-```
+- [参考](https://www.yuque.com/pony13500815917/computer/1556e1e356e8b8d24ea1540304921f61)
 
 ### Core Dependencies
 
@@ -65,36 +57,6 @@ if(err){
 - [参考 2](https://github.com/PatrickJS/awesome-cursorrules)
 
 ### 目录结构
-
-### 命名：
-
-- 组件名字使用大驼峰，组件的文件名使用连字符
-- 基础变量使用匈牙利命名规范，变量名 = 前缀(类型) + 描述(首字母大写)。例如 const iMyAge: number = 18
-
-| 前缀 | 描述                 |
-| :--- | :------------------- |
-| a    | 数组 Array           |
-| b    | 布尔值 Boolean       |
-| cr   | 颜色参考值 Color Ref |
-| fn   | 函数 Function        |
-| h    | 句柄 Handle          |
-| i    | 整形 Int             |
-| s    | 字符串 String        |
-
-### Color
-
-- background 背景色
-- foreground 前景色
-- popover 弹出窗色
-- card 卡片色
-- border 边框色
-- input 输入框色
-- muted 柔和色
-- primary 重要色
-- secondary 次要色
-- accent 强调色
-- destructive 警告、破坏性的
-- ring
 
 ### Todo
 

@@ -1,4 +1,4 @@
-import { env } from "@/env.mjs"
+import { env } from "@/env"
 import { WagmiAdapter } from "@reown/appkit-adapter-wagmi"
 import { mainnet, sepolia, type AppKitNetwork } from "@reown/appkit/networks"
 import { cookieStorage, createStorage } from "@wagmi/core"

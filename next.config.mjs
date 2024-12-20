@@ -1,5 +1,3 @@
-import "./env.mjs"
-
 import createNextIntlPlugin from "next-intl/plugin"
 
 const withNextIntl = createNextIntlPlugin()
