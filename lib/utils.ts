@@ -47,13 +47,5 @@ export function GetNetworkColor(chain?: string) {
   return "gray"
 }
 
-// 严格验证是否为 url，只允许 https 和 http 开头的协议
-export const isUrl = (str: string) =>
-  /^(https?|http):\/\/[^\s/$.?#].[^\s]*$/.test(str)
-
-/**
- * 沉睡一段时间
- * @param ms 延迟的毫秒数
- */
 export const sleep = (ms = 1000) =>
   new Promise((resolve) => setTimeout(resolve, ms))

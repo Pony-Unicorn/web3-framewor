@@ -7,7 +7,7 @@ export const menu = [
     href: "/",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Example",
+    href: "/example",
   },
 ]

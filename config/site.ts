@@ -11,8 +11,7 @@ export const siteConfig = {
   localeDefault: "en",
   links: {
     docs: "",
-    discord: "",
-    twitter: "",
+    twitter: "https://x.com/shunfengge",
     github: "https://github.com/Pony-Unicorn/web3-framework",
   },
 }

@@ -37,12 +37,11 @@ pnpm dev
 
 - [TailwindCSS](https://tailwindcss.com) – Utility-first CSS framework for rapid UI development
 - [Radix](https://www.radix-ui.com/) – Primitives like modal, popover, etc. to build a stellar user experience
-- [shadcn-ui-theme-generator](https://gradient.page/tools/shadcn-ui-theme-generator) - theme generator
 - [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
+- [lucide](https://lucide.dev/) – Beautiful & consistent icons Made by the community.
 - [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
 - [字体动画参考](https://variantvault.chrisabdo.dev/text-variants)
-- [React Icons](https://github.com/react-icons/react-icons) – Beautifully simple, pixel-perfect icons
-- [lucide](https://lucide.dev/) – Beautiful & consistent icons Made by the community.
+- [shadcn-ui-theme-generator](https://gradient.page/tools/shadcn-ui-theme-generator) - theme generator
 
 ### Developer Experience
 
@@ -73,3 +72,12 @@ pnpm dev
 ### 多语言注意事项
 
 - 配置多语言后，需要使用src/navigation 中的 Link, redirect, usePathname, useRouter
+
+### 待处理
+
+- [ ] 简化框架
+- [ ] 去除无用的 ui 鼓励按需安装
+
+- [ ] 合约：获取地址、获取链id、读取合约、写合约
+- [ ] 更新 pnpm
+- [ ] 升级依赖到最新版

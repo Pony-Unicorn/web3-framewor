@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { LuCheck, LuCopy } from "react-icons/lu"
+import { Check, Copy } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -45,11 +45,7 @@ export function CopyButton({
     >
       {children}
       <span className="sr-only">Copy</span>
-      {hasCopied ? (
-        <LuCheck className="h-4 w-4" />
-      ) : (
-        <LuCopy className="h-4 w-4" />
-      )}
+      {hasCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
     </Button>
   )
 }

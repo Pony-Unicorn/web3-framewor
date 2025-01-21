@@ -4,7 +4,7 @@ import { mainnet, sepolia, type AppKitNetwork } from "@reown/appkit/networks"
 import { cookieStorage, createStorage } from "@wagmi/core"
 
 export const networks: [AppKitNetwork, ...AppKitNetwork[]] =
-  env.NEXT_PUBLIC_ENABLE_TESTNETS ? [sepolia] : [mainnet]
+  env.NEXT_PUBLIC_USE_TESTNETS ? [sepolia] : [mainnet]
 
 // Set up the Wagmi Adapter (Config)
 export const wagmiAdapter = new WagmiAdapter({

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { useTranslations } from "next-intl"
 import { SiweMessage } from "siwe"
 import { toast } from "sonner"
 import { useAccount, useSignMessage } from "wagmi"
@@ -24,6 +25,8 @@ import { PageHeader, PageHeaderHeading } from "@/components/layout/page-header"
 import { PageSectionGrid } from "@/components/layout/page-section"
 
 export default function Page() {
+  const t = useTranslations("example")
+
   const account = useAccount()
   const { signMessage, data } = useSignMessage()
 
@@ -36,7 +39,7 @@ export default function Page() {
   return (
     <div className="container relative mt-20 px-0">
       <PageHeader className="pb-8">
-        <PageHeaderHeading>Example Components</PageHeaderHeading>
+        <PageHeaderHeading>{t("title")}</PageHeaderHeading>
       </PageHeader>
       <PageSectionGrid>
         <Card>

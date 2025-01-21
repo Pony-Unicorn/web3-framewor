@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { FaGithub } from "react-icons/fa"
+import { Github } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
@@ -11,7 +11,7 @@ import {
   PageHeaderHeading,
 } from "@/components/layout/page-header"
 import { CopyButton } from "@/components/shared/copy-button"
-import { ExampleDemos } from "@/components/shared/example-demos"
+import { Example } from "@/components/shared/example"
 
 export default function HomePage() {
   return (
@@ -33,7 +33,7 @@ export default function HomePage() {
             rel="noreferrer noopener"
             className={buttonVariants({ variant: "secondary" })}
           >
-            <FaGithub className="mr-2 h-4 w-4" />
+            <Github className="mr-2 h-4 w-4" />
             Github
           </Link>
         </PageHeaderCTA>
@@ -45,7 +45,7 @@ export default function HomePage() {
           </CopyButton>
         </PageHeaderCTA>
       </PageHeader>
-      <ExampleDemos />
+      <Example />
     </div>
   )
 }

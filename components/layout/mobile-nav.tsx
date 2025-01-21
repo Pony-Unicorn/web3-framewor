@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Link } from "@/navigation"
 // import Link from "next/link"
-import { LuMenu } from "react-icons/lu"
+import { Menu } from "lucide-react"
 
 import { menu as menuConfig } from "@/config/menu"
 import { Button } from "@/components/ui/button"
@@ -24,7 +24,7 @@ export function MobileNav() {
             variant="ghost"
             className="ml-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
           >
-            <LuMenu className="h-5 w-5" />
+            <Menu className="h-5 w-5" />
             <span className="sr-only">Toggle Menu</span>
           </Button>
         </SheetTrigger>

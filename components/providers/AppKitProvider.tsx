@@ -32,7 +32,7 @@ export const modal = createAppKit({
     onramp: false,
   },
   allWallets: "ONLY_MOBILE",
-  debug: env.NEXT_PUBLIC_ENABLE_TESTNETS,
+  debug: env.NEXT_PUBLIC_APP_MODE !== "pro",
   enableWalletConnect: false, // default to true, Remove trust wallet and WalletConnect
   enableEIP6963: true,
   enableCoinbase: false, // default to true, Remove Coinbase

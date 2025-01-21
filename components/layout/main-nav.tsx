@@ -4,7 +4,7 @@ import React from "react"
 // import { usePathname } from "next/navigation"
 // import Link from "next/link"
 import { Link, usePathname } from "@/navigation"
-import { FaExternalLinkAlt } from "react-icons/fa"
+import { ExternalLink } from "lucide-react"
 
 import { menu as menuConfig } from "@/config/menu"
 import { siteConfig } from "@/config/site"
@@ -43,7 +43,7 @@ export function MainNav() {
             rel="noreferrer"
           >
             GitHub
-            <FaExternalLinkAlt />
+            <ExternalLink />
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
@@ -53,7 +53,7 @@ export function MainNav() {
             rel="noreferrer"
           >
             Twitter
-            <FaExternalLinkAlt />
+            <ExternalLink />
             <span className="sr-only">Twitter</span>
           </Link>
         </nav>
