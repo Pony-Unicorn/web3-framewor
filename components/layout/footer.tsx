@@ -5,9 +5,9 @@ import { Github, Twitter } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 
 import { LinkComponent } from "../shared/link-component"
-import { buttonVariants } from "../ui/button"
 
 export function Footer({ className, ...props }: HTMLAttributes<HTMLElement>) {
   const classes = cn(
