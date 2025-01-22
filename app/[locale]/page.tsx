@@ -1,6 +1,7 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
-import { Github } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
@@ -12,6 +13,7 @@ import {
 } from "@/components/layout/page-header"
 import { CopyButton } from "@/components/shared/copy-button"
 import { Example } from "@/components/shared/example"
+import WrapSimpleIcon from "@/components/shared/WrapSimpleIcon"
 
 export default function HomePage() {
   return (
@@ -33,7 +35,7 @@ export default function HomePage() {
             rel="noreferrer noopener"
             className={buttonVariants({ variant: "secondary" })}
           >
-            <Github className="mr-2 h-4 w-4" />
+            <WrapSimpleIcon className="mr-2" slug="github" color="white" />
             Github
           </Link>
         </PageHeaderCTA>

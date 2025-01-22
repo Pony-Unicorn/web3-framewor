@@ -1,11 +1,11 @@
 import { HTMLAttributes } from "react"
 import Link from "next/link"
 import packageJson from "@/package.json"
-import { Github, Twitter } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import WrapSimpleIcon from "@/components/shared/WrapSimpleIcon"
 
 import { LinkComponent } from "../shared/link-component"
 
@@ -27,10 +27,10 @@ export function Footer({ className, ...props }: HTMLAttributes<HTMLElement>) {
       </Link>
       <div className="mt-2 flex items-center space-x-2">
         <LinkComponent href={`${siteConfig.links.github}`}>
-          <Github />
+          <WrapSimpleIcon className="mr-2" slug="github" color="white" />
         </LinkComponent>
         <LinkComponent href={`${siteConfig.links.twitter}`}>
-          <Twitter />
+          <WrapSimpleIcon className="mr-2" slug="x" color="white" />
         </LinkComponent>
       </div>
     </footer>

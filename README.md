@@ -2,7 +2,7 @@
 
 # Getting Started
 
-nodeJs：使用 .nvmrc 文件进行管理，版本为 lts/iron , 建议使用 fnm 作为版本管理
+Node Js: Use .nvmrc file for management, the version is lts/iron, it is recommended to use fnm as version management
 
 依赖包管理：必须使用 pnpm，版本为 9.1.4
 
@@ -22,16 +22,16 @@ pnpm install
 pnpm dev
 ```
 
-### 编码规范
+### Coding Standards
 
-- [参考](https://www.yuque.com/pony13500815917/computer/1556e1e356e8b8d24ea1540304921f61)
+- [Reference](https://www.yuque.com/pony13500815917/computer/1556e1e356e8b8d24ea1540304921f61)
 
 ### Core Dependencies
 
 - [Wagmi](https://wagmi.sh/) - Wagmi Reactivity for Ethereum apps
 - [viem](https://viem.sh/) - Ethereum library
 - [@reown/appkit](https://docs.reown.com/appkit/next/core/installation) - Wallet connection manager
-- zustand 其实也许在 nextjs 中你真的不需要状态管理
+- zustand In fact, maybe you really don’t need state management in nextjs
 
 ### User Interface
 
@@ -40,8 +40,9 @@ pnpm dev
 - [ui.shadcn.com](https://ui.shadcn.com) components are included in the `/components/ui` folder
 - [lucide](https://lucide.dev/) – Beautiful & consistent icons Made by the community.
 - [Framer Motion](https://www.framer.com/motion/) – Motion library for React to animate components with ease
-- [字体动画参考](https://variantvault.chrisabdo.dev/text-variants)
+- [Font animation reference](https://variantvault.chrisabdo.dev/text-variants)
 - [shadcn-ui-theme-generator](https://gradient.page/tools/shadcn-ui-theme-generator) - theme generator
+- [Simple Icons](https://simpleicons.org/) - popular brands svg
 
 ### Developer Experience
 
@@ -52,8 +53,8 @@ pnpm dev
 
 ### AI Editor cursor rules
 
-- [参考 1](https://gist.github.com/Shpigford/b3c2abe5e631f3edc4eac919ed31eaeb)
-- [参考 2](https://github.com/PatrickJS/awesome-cursorrules)
+- [Reference 1](https://gist.github.com/Shpigford/b3c2abe5e631f3edc4eac919ed31eaeb)
+- [Reference 2](https://github.com/PatrickJS/awesome-cursorrules)
 
 ### 目录结构
 
@@ -75,7 +76,6 @@ pnpm dev
 
 ### 待处理
 
-- [ ] 检查 lu icon 无效的
 - [ ] 合约：获取地址、获取链id、读取合约、写合约
 - [ ] 更新 pnpm
 - [ ] 升级依赖到最新版
